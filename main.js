@@ -1,8 +1,8 @@
 $.ajax({
-    type: "POST",
-    url: "https://sandbox-api.brewerydb.com/v2/",
+    type: "GET",
+    url: "https://developers.zomato.com/api/v2.1",
     data: {
-      api_key: "7dee30f5ce5e4bcd151612aef261a3d5"
+      api_key: "5b8db0ae65a8f3bb4e2c4f6294364c23"
     },
     success: function(data) {
       console.log(data);
