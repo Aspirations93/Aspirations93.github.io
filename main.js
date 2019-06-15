@@ -1,22 +1,30 @@
-$.ajax({
-    type: "GET",
-    url: "https://developers.zomato.com/api/v2.1",
-    data: {
-      api_key: "5b8db0ae65a8f3bb4e2c4f6294364c23"
-    },
-    success: function(data) {
-      console.log(data);
-      //do something when request is successfull
-    },
-    dataType: "json"
-  });
+function initMap() {
+    var myOptions = {
+      zoom: 8,
+      center: {lat: 53.480759, lng: -2.242631},
+      mapTypeId: google.maps.MapTypeId.TERRAIN,
+      disableDefaultUI: true,
+      // Step 4. Customize displayed controls
+      zoomControl: true,
+      mapTypeControl: true,
+      scaleControl: true
+    }
+    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+    // Step 2. Add custom icon
+    var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+    var marker = new google.maps.Marker({
+      position: {lat: 53.480759, lng: -2.242631},
+      icon: iconBase + 'flag_maps.png',
+      map: map
+    });
+    // Step 3. Add info window
+    var contentString = '<div id="content"><h2 id="firstHeading" class="firstHeading">Custom info window</h2><p>This is a cool custom info window.</p></div>';
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+    marker.addListener('click', function() {
+      infowindow.open(map, marker);
+    });
+  }
 
-  fetch('https://developers.zomato.com/api/v2.1')
-   .then(function (response) {
-       return response.json();
-   })
-   .then(function (myJson) {
-       // this is where you use the data coming in
-       console.log(JSON.stringify(myJson));
-   });
-
+  //test
