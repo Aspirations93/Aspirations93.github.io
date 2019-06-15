@@ -10,3 +10,13 @@ $.ajax({
     },
     dataType: "json"
   });
+
+  fetch('https://developers.zomato.com/api/v2.1')
+   .then(function (response) {
+       return response.json();
+   })
+   .then(function (myJson) {
+       // this is where you use the data coming in
+       console.log(JSON.stringify(myJson));
+   });
+
