@@ -183,6 +183,7 @@ header {
   background-size: cover;
 }
 
+<<<<<<< HEAD
 .container-fluid {
   background-color: aquamarine;
   height: 50%;
@@ -207,6 +208,11 @@ td {
 
 .tr {
   text-align: left;
+=======
+.container {
+  background-color: aquamarine;
+  height: 25%;
+>>>>>>> commit
 }
 
 h1 {
