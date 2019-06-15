@@ -20,7 +20,7 @@ p {
 }
 
 header {
-  background-image: url("pair2.jpg"), url("pair1.jpg");
+  background-image: url("pair2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
