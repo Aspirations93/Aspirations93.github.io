@@ -52,6 +52,11 @@ header {
   background-size: cover;
 }
 
+.container {
+  background-color: aquamarine;
+  height: 25%;
+}
+
 h1 {
   font-size: 60px;
 }
